@@ -195,7 +195,17 @@
     .hw-card:nth-child(3) { padding-left: 0; border-left: 0; }
     .cm-wrap { grid-template-columns: 1fr; gap: 24px; }
   }
-  @media (max-width: 600px) { .hi-row { grid-template-columns: 64px 24px 1fr !important; } }
+  @media (max-width: 600px) {
+    .hi-row { grid-template-columns: 64px 24px 1fr !important; }
+    .hw-matrix { min-width: 0; }
+    .hw-matrix th, .hw-matrix td { padding: 12px 4px; font-size: 13px; }
+    .hw-matrix thead th { font-size: 13px; }
+    .hw-matrix tbody th { width: auto; }
+    .hw-card { padding: 22px 12px 8px 0; }
+    .hw-card + .hw-card { padding-left: 12px; }
+    .hw-card b { font-size: 20px; }
+    .hw-axis { font-size: 11px; }
+  }
   @media (max-width: 900px) {
     .ab-head { grid-template-columns: 1fr; gap: 24px; }
     .ab-video .ceo-video { aspect-ratio: 16 / 9; }
