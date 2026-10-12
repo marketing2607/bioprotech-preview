@@ -408,19 +408,86 @@ footer { background: #0a1428; color: rgba(255,255,255,.62); }
   img, video, svg { max-width: 100%; }
 }
 
-/* ============ 261012 — 모바일 메뉴: 흰 배경이 화면 끝까지, 모든 항목 남색 글씨 ============ */
+/* ============ 261012 — 모바일 메뉴: 남색 전면 패널 + 번호·영문 라벨 + 카테고리 + 하단 연락처 ============ */
+.nav-m-cats, .nav-m-foot { display: none; }
 @media (max-width: 900px) {
-  /* 헤더의 backdrop-filter 때문에 메뉴 높이가 헤더 높이로 줄어드는 문제 → 높이 직접 지정 */
+  body.nav-locked { overflow: hidden; }
+  /* 메뉴가 열리면 헤더도 같은 남색으로 */
+  .bp-header.menu-open { background: #0a1428 !important; box-shadow: 0 1px 0 rgba(255,255,255,.08) !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .bp-header.menu-open .wordmark,
+  .bp-header.menu-open .bp-search-btn,
+  .bp-header.menu-open .bp-lang-toggle button { color: #fff; }
+  .bp-header.menu-open .bp-lang-toggle button:not(.active) { opacity: .55; }
+  .bp-header.menu-open .brand .brand-logo { filter: brightness(0) invert(1); }
+  .bp-header.menu-open .bp-burger span { background: #fff; }
+
+  /* 패널: 헤더 아래 화면 끝까지, 남색 + 하단 세계지도 */
   .bp-nav {
     top: 64px; right: 0; bottom: auto; left: 0;
     height: calc(100vh - 64px); height: calc(100dvh - 64px);
-    overflow-y: auto; background: #fff; z-index: 60;
-    box-shadow: 0 1px 0 #d2d2d7;
+    overflow-y: auto; z-index: 60;
+    padding: 12px 24px 0;
+    background: #0a1428;
+    counter-reset: mnav;
   }
-  .bp-header .bp-nav a,
-  .bp-header .bp-nav a.active,
-  .bp-header .bp-nav a:hover,
-  .bp-header .bp-nav .nav-mega-btn { color: #0a1428 !important; }
-  .bp-header .bp-nav a.active { font-weight: 700; }
-  .bp-nav a::after { display: none; }
+  /* 메뉴 항목: 번호 · 이름 · 영문 라벨 */
+  .bp-header .bp-nav > a,
+  .bp-header .bp-nav .nav-mega-btn {
+    counter-increment: mnav;
+    display: grid !important; grid-template-columns: 34px 1fr auto; align-items: baseline;
+    width: 100%; padding: 17px 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,.1) !important;
+    font-size: 21px !important; font-weight: 600 !important; letter-spacing: -0.01em;
+    color: #fff !important; text-align: left;
+  }
+  .bp-header .bp-nav > a::before,
+  .bp-header .bp-nav .nav-mega-btn::before {
+    content: counter(mnav, decimal-leading-zero);
+    font-size: 11px; font-weight: 700; letter-spacing: .08em; color: rgba(255,255,255,.35);
+  }
+  .bp-header .bp-nav > a::after,
+  .bp-header .bp-nav .nav-mega-btn::after {
+    content: attr(data-sub); display: block !important; position: static !important;
+    height: auto !important; background: none !important; transform: none !important;
+    font-size: 10px; font-weight: 600; letter-spacing: .16em; color: rgba(255,255,255,.35);
+  }
+  body[data-lang="en"] .bp-nav > a::after, body[data-lang="en"] .bp-nav .nav-mega-btn::after { content: none; }
+  /* 현재 페이지: 빨간 번호 + 빨간 점 */
+  .bp-header .bp-nav > a.active::before,
+  .bp-header .bp-nav .nav-mega-btn.active::before { color: #c8102e; }
+  .bp-header .bp-nav > a.active::after,
+  .bp-header .bp-nav .nav-mega-btn.active::after { color: #ff6b80; }
+  .nav-has-mega { border: 0; }
+  .nav-has-mega .nav-mega { display: none; }
+
+  /* 제품 아래 4개 카테고리 바로가기 */
+  .nav-m-cats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,.1); margin: 0 0 0 34px; border: 1px solid rgba(255,255,255,.1); border-top: 0; }
+  .nav-m-cats a { background: #0a1428; padding: 12px 14px; display: flex; flex-direction: column; gap: 3px; border: 0 !important; }
+  .nav-m-cats b { font-size: 10px; font-weight: 700; letter-spacing: .14em; color: #8fa6d6; }
+  .nav-m-cats span { font-size: 14px; font-weight: 500; color: #fff; }
+  .nav-m-cats a:active { background: #14306b; }
+
+  /* 하단: 견적 문의 버튼 · 연락처 · SNS */
+  .nav-m-foot { display: block; padding: 28px 0 40px; position: relative; isolation: isolate; }
+  .nav-m-foot::before { content: ''; position: absolute; z-index: -1; left: -24px; right: -24px; top: 92px; bottom: 0; background: url("../img/about/ceo-global.svg") 70% 40% / 180% auto no-repeat; opacity: .45; }
+  .nav-has-mega { padding: 0; margin: 0; }
+  .bp-header .bp-nav .nav-mega-btn { letter-spacing: -0.01em !important; gap: 0 !important; }
+  .nav-m-cta { display: flex !important; justify-content: space-between; align-items: center; background: #c8102e; color: #fff !important; font-size: 16px; font-weight: 700; padding: 16px 20px !important; border: 0 !important; }
+  .nav-m-cta span { font-size: 18px; }
+  .nav-m-info { display: grid; gap: 4px; margin-top: 24px; }
+  .nav-m-info small { font-size: 11px; letter-spacing: .08em; color: rgba(255,255,255,.45); }
+  .nav-m-info a { font-size: 18px; font-weight: 600; color: #fff !important; padding: 0 !important; border: 0 !important; }
+  .nav-m-info small:last-child { margin-top: 4px; }
+  .nav-m-sns { display: flex; gap: 10px; margin-top: 22px; }
+  .nav-m-sns .sns-btn { width: 42px; height: 42px; padding: 0 !important; justify-content: center; border: 1px solid rgba(255,255,255,.25) !important; color: #fff !important; }
+  .nav-m-sns .sns-btn span { display: none; }
+
+  /* 열릴 때 항목이 차례로 올라오는 짧은 전환 */
+  .bp-nav.open > a, .bp-nav.open > .nav-has-mega, .bp-nav.open > .nav-m-foot { animation: mnavIn .35s ease both; }
+  .bp-nav.open > :nth-child(2) { animation-delay: .03s; } .bp-nav.open > :nth-child(3) { animation-delay: .06s; }
+  .bp-nav.open > :nth-child(4) { animation-delay: .09s; } .bp-nav.open > :nth-child(5) { animation-delay: .12s; }
+  .bp-nav.open > :nth-child(6) { animation-delay: .15s; } .bp-nav.open > :nth-child(7) { animation-delay: .18s; }
+  .bp-nav.open > :nth-child(8) { animation-delay: .22s; }
 }
+@keyframes mnavIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .bp-nav.open > * { animation: none !important; } }
