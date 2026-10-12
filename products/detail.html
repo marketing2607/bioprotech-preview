@@ -115,6 +115,25 @@
   .dl-cat b { display: block; font-size: 14px; color: #1d1d1f; }
   .dl-cat span { font-size: 12px; color: #6e6e73; }
   .dl-cat a { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--bp-accent5); white-space: nowrap; }
+  @media (max-width: 600px) {
+    .spec-table, .spec-table tbody, .spec-table tr, .spec-table th, .spec-table td { display: block; width: 100%; }
+    .spec-table th { background: none; padding: 14px 0 4px; font-size: 12px; color: #6e6e73; }
+    .spec-table td { padding: 0 0 14px; font-size: 14px; }
+    .chips span { background: none; padding: 0; border-radius: 0; font-size: 14px; color: #424245; }
+    .chips { gap: 4px 12px; }
+    .mtable-wrap { border: 0; border-radius: 0; overflow: visible; }
+    .mtable { min-width: 0; }
+    .mtable thead { display: none; }
+    .mtable, .mtable tbody, .mtable tr, .mtable td { display: block; width: 100%; }
+    .mtable tr { border-top: 1px solid #e5e5ea; padding: 12px 0; }
+    .mtable td { border: 0; padding: 3px 0; display: grid; grid-template-columns: 96px 1fr; gap: 10px; white-space: normal !important; }
+    .mtable td::before { content: attr(data-l); font-size: 11px; font-weight: 600; color: #86868b; padding-top: 2px; }
+    .mtable td:first-child { font-size: 15px; }
+    .dl-cat { flex-wrap: wrap; }
+    .dl-cat > div { flex: 1 1 160px; min-width: 0; }
+    .dl-cat b { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .dl-cat a { margin-left: 72px; }
+  }
   @media (max-width: 900px) {
     .detail-grid { grid-template-columns: 1fr; gap: 32px; }
     .rel-grid { grid-template-columns: repeat(2, 1fr); }
@@ -272,12 +291,12 @@
     const draw = q => {
       const rs = prod.spec.rows.filter(r => !q || r.join(' ').toLowerCase().includes(q.toLowerCase()));
       tbl.innerHTML = `<thead><tr>${prod.spec.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>` +
-        (rs.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('') || `<tr><td colspan="${prod.spec.columns.length}">${L('검색 결과가 없습니다.','No matching models.','Sin resultados.')}</td></tr>`) + '</tbody>';
+        (rs.map(r => `<tr>${r.map((c,i) => `<td data-l="${esc(prod.spec.columns[i]||'')}">${esc(c)}</td>`).join('')}</tr>`).join('') || `<tr><td colspan="${prod.spec.columns.length}">${L('검색 결과가 없습니다.','No matching models.','Sin resultados.')}</td></tr>`) + '</tbody>';
     };
     inp.oninput = () => draw(inp.value.trim()); draw('');
     if (prod.accessories) {
       const a = prod.accessories;
-      document.getElementById('acc-wrap').innerHTML = `<h3 style="margin-top:40px">${L('액세서리','Accessories','Accesorios')}</h3><div class="mtable-wrap" style="margin-top:14px"><table class="mtable"><thead><tr>${a.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${a.rows.map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      document.getElementById('acc-wrap').innerHTML = `<h3 style="margin-top:40px">${L('액세서리','Accessories','Accesorios')}</h3><div class="mtable-wrap" style="margin-top:14px"><table class="mtable"><thead><tr>${a.columns.map(c => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${a.rows.map(r => `<tr>${r.map((c,i) => `<td data-l="${esc(a.columns[i]||'')}">${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
     }
   }
 
