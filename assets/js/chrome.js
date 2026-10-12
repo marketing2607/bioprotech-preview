@@ -62,6 +62,25 @@
     {id:'if-unit',                cat:'pain',   name:{ko:'IF Unit',                    en:'IF Unit',                     es:'IF Unit'}},
   ];
 
+  // --------- 모바일 메뉴 하단: 견적 문의·연락처·SNS (261012) ----------
+  function mobileFoot() {
+    const T = {
+      ko: { q:'견적 문의하기', h:'고객 상담', hrs:'평일 09:00 ~ 18:00' },
+      en: { q:'Request a Quote', h:'Customer Service', hrs:'Weekdays 09:00 ~ 18:00 (KST)' },
+      es: { q:'Solicitar presupuesto', h:'Atención al cliente', hrs:'Días laborables 09:00 ~ 18:00 (KST)' },
+    }[currentLang] || {};
+    return `<div class="nav-m-foot">
+      <a class="nav-m-cta" href="${BASE}/support/contact.html">${T.q}<span aria-hidden="true">→</span></a>
+      <div class="nav-m-info">
+        <small>${T.h}</small>
+        <a href="tel:+82337357720">033-735-7720</a>
+        <a href="mailto:info@protechsite.com">info@protechsite.com</a>
+        <small>${T.hrs}</small>
+      </div>
+      <div class="nav-m-sns">${snsHTML()}</div>
+    </div>`;
+  }
+
   // --------- Header HTML ----------
   function headerHTML() {
     const active = document.body.dataset.nav || '';
@@ -97,10 +116,12 @@
       </div>`;
     }).join('');
 
+    const SUB = {home:'HOME',about:'ABOUT',news:'NEWS',products:'PRODUCTS',downloads:'DOWNLOAD',support:'SUPPORT',contact:'CONTACT'};
     const nav = items.map(([id, href, label]) => {
       if (id === 'products') {
         return `<div class="nav-has-mega${active === id ? ' active' : ''}" id="nav-prod-wrap">
-          <a href="${href}" class="nav-mega-btn${active === id ? ' active' : ''}" id="nav-prod-btn" aria-expanded="false" aria-haspopup="true">${label}</a>
+          <a href="${href}" class="nav-mega-btn${active === id ? ' active' : ''}" id="nav-prod-btn" data-sub="${SUB[id]}" aria-expanded="false" aria-haspopup="true">${label}</a>
+          <div class="nav-m-cats">${MEGA_CATS.map(c => `<a href="${BASE}/products/category.html?cat=${c.id}"><b>${c.code}</b><span>${c.name[currentLang]}</span></a>`).join('')}</div>
           <div class="nav-mega" id="nav-mega" aria-hidden="true">
             <div class="mega-wrap">
               <div class="mega-inner">${megaCols}</div>
@@ -109,8 +130,8 @@
           </div>
         </div>`;
       }
-      return `<a href="${href}" class="${active === id ? 'active' : ''}">${label}</a>`;
-    }).join('');
+      return `<a href="${href}" class="${active === id ? 'active' : ''}" data-sub="${SUB[id]}">${label}</a>`;
+    }).join('') + mobileFoot();
 
     return `
     <header class="bp-header ${isHome ? '' : 'solid'}" id="bp-header">
@@ -443,6 +464,9 @@
       burger.addEventListener('click', () => {
         burger.classList.toggle('open');
         nav.classList.toggle('open');
+        const op = nav.classList.contains('open');
+        if (header) header.classList.toggle('menu-open', op);
+        document.body.classList.toggle('nav-locked', op);
       });
     }
 
