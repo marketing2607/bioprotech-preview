@@ -388,3 +388,22 @@ footer { background: #0a1428; color: rgba(255,255,255,.62); }
 /* ============ 261008 — 플로팅 문의 버튼: 포인트 레드 ============ */
 .floating a.fl-contact { background: #c8102e; box-shadow: 0 6px 16px rgba(200,16,46,.35); }
 .floating a.fl-contact:hover { background: #a50d26; }
+
+/* ============ 261012 — MOBILE (≤600px) ============ */
+@media (max-width: 600px) {
+  /* 플로팅 버튼: 본문을 가리지 않도록 작게, 문의 버튼만 */
+  .floating { right: 12px; bottom: 16px; gap: 8px; }
+  .floating a, .floating button { width: 46px; height: 46px; }
+  .floating svg { width: 20px; height: 20px; }
+  .floating a[href="#top"] { display: none; }
+  /* 회사 하위 탭 4개가 한 줄에 */
+  .company-tabs { padding: 0 12px; top: 64px; }
+  .company-tabs nav { gap: 2px; justify-content: space-between; padding: 10px 0; }
+  .company-tabs a { padding: 8px 10px; font-size: 13px; }
+  /* 긴 단어·주소 줄바꿈 */
+  .page-body { overflow-wrap: anywhere; word-break: keep-all; }
+  .page-body table { word-break: break-word; }
+  /* 기본 표: 라벨 칸 좁게 */
+  .page-body table th { width: auto; }
+  img, video, svg { max-width: 100%; }
+}
