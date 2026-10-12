@@ -183,6 +183,7 @@
   .gl-list li small { margin-left: auto; font-size: 10px; font-weight: 700; letter-spacing: .06em; color: #86868b; }
   .gl-list li:hover { color: #0f2655; font-weight: 600; }
   .gl-list li[hidden] { display: none; }
+  @media (max-width: 600px) { .gl-list { columns: 2; column-gap: 18px; } .gl-list li { font-size: 13px; } .gl-list li small { display: none; } .floating { bottom: 76px; } }
   @media (max-width: 900px) {
     .gl-tabs { grid-template-columns: repeat(3, 1fr); }
     .gl-tabs button:nth-child(4) { border-left: 0; }
