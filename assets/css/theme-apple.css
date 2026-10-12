@@ -407,3 +407,20 @@ footer { background: #0a1428; color: rgba(255,255,255,.62); }
   .page-body table th { width: auto; }
   img, video, svg { max-width: 100%; }
 }
+
+/* ============ 261012 — 모바일 메뉴: 흰 배경이 화면 끝까지, 모든 항목 남색 글씨 ============ */
+@media (max-width: 900px) {
+  /* 헤더의 backdrop-filter 때문에 메뉴 높이가 헤더 높이로 줄어드는 문제 → 높이 직접 지정 */
+  .bp-nav {
+    top: 64px; right: 0; bottom: auto; left: 0;
+    height: calc(100vh - 64px); height: calc(100dvh - 64px);
+    overflow-y: auto; background: #fff; z-index: 60;
+    box-shadow: 0 1px 0 #d2d2d7;
+  }
+  .bp-header .bp-nav a,
+  .bp-header .bp-nav a.active,
+  .bp-header .bp-nav a:hover,
+  .bp-header .bp-nav .nav-mega-btn { color: #0a1428 !important; }
+  .bp-header .bp-nav a.active { font-weight: 700; }
+  .bp-nav a::after { display: none; }
+}
