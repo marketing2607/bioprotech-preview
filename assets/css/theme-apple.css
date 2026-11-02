@@ -491,3 +491,35 @@ footer { background: #0a1428; color: rgba(255,255,255,.62); }
 }
 @keyframes mnavIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .bp-nav.open > * { animation: none !important; } }
+
+/* ============ 261102 — 메인 히어로: 흰 톤 (밝은 사진 + 흰 덮개 + 남색 글자) ============ */
+body[data-page="home"] .hero { color: #0a1428; }
+.hero-overlay {
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 48%, rgba(255,255,255,.80) 0%, rgba(255,255,255,.55) 60%, rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.70) 0%, rgba(255,255,255,.35) 22%, rgba(255,255,255,.30) 70%, rgba(255,255,255,.55) 100%);
+}
+.hero-content { text-shadow: none; }
+.hero-content .hero-desc { opacity: 1; color: #2b3a55; }
+.hero .btn-primary { background: #0a1428; color: #fff; }
+.hero .btn-primary:hover { background: #14306b; color: #fff; }
+.hero .btn-ghost { border-color: #0a1428; color: #0a1428; background: rgba(255,255,255,.4); }
+.hero .btn-ghost:hover { background: #0a1428; color: #fff; }
+.hero-indicators i { background: rgba(10,20,40,.22); }
+.hero-indicators i.active { background: #0a1428; }
+/* 하단 카테고리 바: 흰 반투명 + 남색 글자 */
+body[data-page="home"] .hero-tabs { background: rgba(255,255,255,.78) !important; border-top: 1px solid rgba(10,20,40,.10) !important; }
+body[data-page="home"] .hero-tabs a { color: #0a1428 !important; border-left-color: rgba(10,20,40,.10) !important; }
+body[data-page="home"] .hero-tabs a:hover { background: rgba(10,20,40,.06) !important; }
+/* 메인 상단 헤더(스크롤 전): 흰 사진 위라 남색 글자·원래 색 로고 */
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) { color: #0a1428; }
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .brand .brand-logo { filter: none; }
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .bp-nav a.active,
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .bp-nav a:hover,
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .nav-mega-btn,
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .bp-search-btn { color: #0a1428; }
+body[data-page="home"] .bp-header:not(.scrolled):not(.solid) .bp-header-cta .pill:hover { background: #0a1428; color: #fff; border-color: #0a1428; }
+/* 모바일 메뉴를 연 상태는 남색 헤더 유지 */
+body[data-page="home"] .bp-header.menu-open:not(.scrolled):not(.solid) { color: #fff; }
+body[data-page="home"] .bp-header.menu-open:not(.scrolled):not(.solid) .brand .brand-logo { filter: brightness(0) invert(1); }
+body[data-page="home"] .bp-header.menu-open:not(.scrolled):not(.solid) .bp-search-btn { color: #fff; }
