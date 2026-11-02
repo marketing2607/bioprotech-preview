@@ -496,11 +496,12 @@ footer { background: #0a1428; color: rgba(255,255,255,.62); }
 body[data-page="home"] .hero { color: #0a1428; }
 .hero-overlay {
   background:
-    radial-gradient(ellipse 60% 55% at 50% 48%, rgba(255,255,255,.80) 0%, rgba(255,255,255,.55) 60%, rgba(255,255,255,0) 100%),
-    linear-gradient(180deg, rgba(255,255,255,.70) 0%, rgba(255,255,255,.35) 22%, rgba(255,255,255,.30) 70%, rgba(255,255,255,.55) 100%);
+    radial-gradient(ellipse 46% 30% at 50% 47%, rgba(255,255,255,.42) 0%, rgba(255,255,255,0) 100%),
+    linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.12) 20%, rgba(255,255,255,.10) 75%, rgba(255,255,255,.35) 100%);
 }
-.hero-content { text-shadow: none; }
-.hero-content .hero-desc { opacity: 1; color: #2b3a55; }
+.hero-content { text-shadow: 0 0 22px rgba(255,255,255,.95), 0 0 6px rgba(255,255,255,.8); }
+.hero-content .btn { text-shadow: none; }
+.hero-content .hero-desc { opacity: 1; color: #1d2a44; font-weight: 500; }
 .hero .btn-primary { background: #0a1428; color: #fff; }
 .hero .btn-primary:hover { background: #14306b; color: #fff; }
 .hero .btn-ghost { border-color: #0a1428; color: #0a1428; background: rgba(255,255,255,.4); }
