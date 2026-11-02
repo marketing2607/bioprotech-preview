@@ -4,7 +4,8 @@
 (function () {
   const BASE = document.body.dataset.base || '.';
   const LANG_KEY = 'bp-lang';
-  const currentLang = localStorage.getItem(LANG_KEY) || 'ko';
+  // 261102: 스페인어 페이지 삭제 → 한국어·영어만 사용 (예전에 ES를 고른 방문자는 한국어로)
+  const currentLang = ['ko','en'].includes(localStorage.getItem(LANG_KEY)) ? localStorage.getItem(LANG_KEY) : 'ko';
   document.documentElement.lang = currentLang;
   document.body.dataset.lang = currentLang;
 
@@ -47,7 +48,10 @@
     {id:'smoke-adapter',          cat:'esu',    name:{ko:'Smoke Adapter',               en:'Smoke Adapter',               es:'Smoke Adapter'}},
     {id:'laparoscopic',           cat:'esu',    name:{ko:'Laparoscopic',                en:'Laparoscopic',                es:'Laparoscopic'}},
     {id:'esu-plate',              cat:'esu',    name:{ko:'ESU Plate',                   en:'ESU Plate',                   es:'ESU Plate'}},
-    {id:'ecg-electrode',          cat:'cardio', name:{ko:'ECG Electrode',               en:'ECG Electrode',               es:'ECG Electrode'}},
+    {id:'ecg-monitoring', cat:'cardio', name:{ko:'Monitoring ECG Electrode', en:'Monitoring ECG Electrode', es:'Monitoring ECG Electrode'}},
+    {id:'ecg-diaphoretic', cat:'cardio', name:{ko:'Diaphoretic ECG Electrode', en:'Diaphoretic ECG Electrode', es:'Diaphoretic ECG Electrode'}},
+    {id:'ecg-radiolucent', cat:'cardio', name:{ko:'Radiolucent ECG Electrode', en:'Radiolucent ECG Electrode', es:'Radiolucent ECG Electrode'}},
+    {id:'ecg-stress-holter', cat:'cardio', name:{ko:'Stress Test · Holter ECG Electrode', en:'Stress Test · Holter ECG Electrode', es:'Stress Test · Holter ECG Electrode'}},
     {id:'tab-electrode',          cat:'cardio', name:{ko:'TAB Electrode',               en:'TAB Electrode',               es:'TAB Electrode'}},
     {id:'neonatal-electrode',     cat:'cardio', name:{ko:'Neonatal Electrode',          en:'Neonatal Electrode',          es:'Neonatal Electrode'}},
     {id:'spo2-sensor',            cat:'cardio', name:{ko:'SpO₂ Sensor',                en:'SpO₂ Sensor',                 es:'SpO₂ Sensor'}},
@@ -147,7 +151,6 @@
         <div class="bp-lang-toggle" role="group" aria-label="Language">
           <button type="button" data-lang="ko" class="${currentLang==='ko'?'active':''}">KO</button>
           <button type="button" data-lang="en" class="${currentLang==='en'?'active':''}">EN</button>
-          <button type="button" data-lang="es" class="${currentLang==='es'?'active':''}">ES</button>
         </div>
         <a href="${BASE}/support/contact.html" class="pill">${({ko:'견적 문의',en:'Get a Quote',es:'Solicitar presupuesto'})[currentLang]||'견적 문의'}</a>
         <button type="button" class="bp-burger" id="bp-burger" aria-label="Menu">
