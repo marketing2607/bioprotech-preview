@@ -1556,49 +1556,46 @@
       ]
     },
     {
-      "id": "ecg-electrode",
+      "id": "ecg-monitoring",
       "cat": "cardio",
       "order": 1,
       "name": {
-        "ko": "ECG Electrode",
-        "en": "ECG Electrode",
-        "es": "ECG Electrode"
+        "ko": "Monitoring ECG Electrode",
+        "en": "Monitoring ECG Electrode",
+        "es": "Monitoring ECG Electrode"
       },
       "tagline": {
-        "ko": "심전도 측정용 1회용 전극 (General / Wetgel)",
-        "en": "Disposable ECG electrode (General / Wetgel)",
-        "es": "Electrodo de ECG desechable (General / Wetgel)"
+        "ko": "일반 모니터링용 심전도 전극 (성인·소아)",
+        "en": "ECG electrodes for routine monitoring (adult · pediatric)",
+        "es": "ECG electrodes for routine monitoring (adult · pediatric)"
       },
       "catalog": {
         "file": "bioprotech-ecg-catalog-250618.pdf",
         "name": "TELECTRODE Monitoring ECG Electrodes"
       },
       "summary": {
-        "ko": "TELECTRODE는 성인 및 소아 환자용 스냅형 심전도 모니터링 전극으로, PE 폼·천(Cloth)·투명 테이프 백킹과 다양한 크기 및 형태로 구성됩니다. 다한증(발한) 환자용, 민감한 피부용, 방사선 투과형(X-ray/MRI) 및 습식 젤 부하검사·홀터용 제품을 포함합니다.",
-        "en": "TELECTRODE is a line of snap-type ECG monitoring electrodes for adult and pediatric patients, offered in PE foam, cloth and clear tape backings and in several sizes and shapes. The range includes diaphoretic, fragile-skin, radiolucent (X-ray/MRI) and wet-gel stress test/Holter versions."
+        "ko": "다양한 크기와 형태로 성인·소아 환자의 체형에 맞춰 쓰는 일반 모니터링용 스냅형 심전도 전극입니다. PE 폼, 천(Cloth), 투명 테이프 백킹 중에서 고를 수 있습니다.",
+        "en": "Snap-type ECG electrodes for routine monitoring, offered in several sizes and shapes for adult and pediatric patients, with PE foam, cloth or clear tape backing.",
+        "es": "Snap-type ECG electrodes for routine monitoring, offered in several sizes and shapes for adult and pediatric patients, with PE foam, cloth or clear tape backing."
       },
       "features": {
         "ko": [
-          "3가지 백킹 선택: PE 폼, 천(Cloth), 투명 테이프",
-          "성인 환자용 다양한 크기 및 형태(원형, 물방울형, 사각형)",
-          "소아 체형에 맞춘 소형 T718",
-          "다한증용(T815): 넓은 접촉 면적과 강한 점착력",
-          "민감한 피부용(T832/T832C): 부드러운 점착제와 저자극 피부 전처리 연마재",
-          "방사선 투과형 'C' 모델은 X-ray 또는 MRI 촬영 시 제거 없이 사용 가능",
-          "부하검사·홀터용 습식 젤 'W' 모델: 전도성 습식 젤로 피부 임피던스 감소, Ag/AgCl 센서",
-          "투명 테이프 백킹으로 전극 아래 피부 상태 육안 확인 가능",
-          "스트립 타입은 영업팀 문의"
+          "범용(Universal) 8종, 소아용 1종",
+          "PE 폼: 부드러운 쿠션감, 피부 습기 차단",
+          "천(Cloth): 활동이 많은 환자에게 오래 부착",
+          "투명 테이프: 부착 부위 피부 상태를 눈으로 확인"
         ],
         "en": [
-          "Three backing options: PE foam, cloth, clear tape",
-          "Multiple sizes and shapes (round, teardrop, square) for adult patients",
-          "Compact T718 for pediatric anatomy",
-          "Diaphoretic solution (T815): expanded surface area and strong adhesive",
-          "Fragile skin solution (T832/T832C): soft adhesive and gentle skin preparatory abrader",
-          "Radiolucent 'C' models can remain applied during X-ray or MRI procedures",
-          "Wet gel 'W' models for stress test and Holter: conductive wet gel reduces skin impedance, Ag/AgCl sensor",
-          "Clear tape backing allows visual check of the skin under the electrode",
-          "Strip type available on consultation with sales team"
+          "8 universal models and 1 pediatric model",
+          "PE foam: soft cushioning, prevents moisture build-up",
+          "Cloth: long wear for active patients",
+          "Clear tape: skin under the electrode stays visible"
+        ],
+        "es": [
+          "8 universal models and 1 pediatric model",
+          "PE foam: soft cushioning, prevents moisture build-up",
+          "Cloth: long wear for active patients",
+          "Clear tape: skin under the electrode stays visible"
         ]
       },
       "applications": [
@@ -1606,16 +1603,11 @@
         "ICU/CCU",
         "Telemetry/Holter/Event",
         "OR",
-        "Cath Lab",
-        "Stress Test",
         "Cardiac Rehab",
         "Echo-Cardio",
         "Universal Foam Monitoring",
         "Pediatric",
-        "Solutions of Fragile skin",
-        "Diaphoretic solutions",
-        "Fluid resistant solutions",
-        "Repositionable"
+        "Fluid resistant solutions"
       ],
       "spec": {
         "columns": [
@@ -1631,14 +1623,7 @@
             "PE Foam",
             "Ø55",
             "Round",
-            "Adult"
-          ],
-          [
-            "T715C",
-            "PE Foam",
-            "Ø55",
-            "Round",
-            "Adult"
+            "Universal"
           ],
           [
             "T716",
@@ -1648,81 +1633,11 @@
             "Universal"
           ],
           [
-            "T716C",
-            "PE Foam",
-            "43 x 45",
-            "Teardrop",
-            "Universal / Radiolucent"
-          ],
-          [
             "T717",
             "PE Foam",
             "Ø43",
             "Round",
-            "Adult"
-          ],
-          [
-            "T718",
-            "PE Foam",
-            "32 x 38",
-            "Teardrop",
-            "Pediatric"
-          ],
-          [
-            "T718C",
-            "PE Foam",
-            "32 x 38",
-            "Teardrop",
-            "Pediatric / Radiolucent"
-          ],
-          [
-            "T815",
-            "Cloth",
-            "Ø55",
-            "Round",
-            "Adult"
-          ],
-          [
-            "T815C",
-            "Cloth",
-            "Ø55",
-            "Round",
-            "Adult / Radiolucent"
-          ],
-          [
-            "T816",
-            "Cloth",
-            "43 x 45",
-            "Teardrop",
             "Universal"
-          ],
-          [
-            "T916",
-            "Clear tape",
-            "43 x 45",
-            "Teardrop",
-            "Universal"
-          ],
-          [
-            "T916C",
-            "Clear tape",
-            "43 x 45",
-            "Teardrop",
-            "Universal / Radiolucent"
-          ],
-          [
-            "T832",
-            "Cloth",
-            "Ø32",
-            "Round",
-            "Pediatric"
-          ],
-          [
-            "T832C",
-            "Cloth",
-            "Ø32",
-            "Round",
-            "Pediatric / Radiolucent"
           ],
           [
             "T711T",
@@ -1730,13 +1645,6 @@
             "37 x 42.5",
             "Teardrop",
             "Universal"
-          ],
-          [
-            "T711CT",
-            "PE Foam",
-            "37 x 42.5",
-            "Teardrop",
-            "Universal / Radiolucent"
           ],
           [
             "T712T",
@@ -1753,85 +1661,37 @@
             "Universal"
           ],
           [
-            "T724CT",
-            "PE Foam",
-            "36 x 42",
-            "Square",
-            "Universal / Radiolucent"
-          ],
-          [
-            "T715W",
-            "PE Foam",
-            "Ø55",
-            "Round",
-            "Adult / Wet gel"
-          ],
-          [
-            "T715CW",
-            "PE Foam",
-            "Ø55",
-            "Round",
-            "Adult / Wet gel / Radiolucent"
-          ],
-          [
-            "T716W",
-            "PE Foam",
-            "43 x 45",
-            "Teardrop",
-            "Universal / Wet gel"
-          ],
-          [
-            "T716CW",
-            "PE Foam",
-            "43 x 45",
-            "Teardrop",
-            "Universal / Wet gel / Radiolucent"
-          ],
-          [
-            "T815W",
-            "Cloth",
-            "Ø55",
-            "Round",
-            "Adult / Wet gel"
-          ],
-          [
-            "T815CW",
-            "Cloth",
-            "Ø55",
-            "Round",
-            "Adult / Wet gel / Radiolucent"
-          ],
-          [
-            "T816W",
+            "T816",
             "Cloth",
             "43 x 45",
             "Teardrop",
-            "Universal / Wet gel"
+            "Universal"
           ],
           [
-            "T816CW",
-            "Cloth",
+            "T916",
+            "Clear tape",
             "43 x 45",
             "Teardrop",
-            "Universal / Wet gel / Radiolucent"
+            "Universal"
+          ],
+          [
+            "T718",
+            "PE Foam",
+            "32 x 38",
+            "Teardrop",
+            "Pediatric"
           ]
         ]
       },
-      "packing": "PACKING: 50pcs/pack, 20packs/box, 10boxes/case; WETGEL PACKING: 30pcs/pack, 20packs/box, 10boxes/case",
-      "material": "Backing: PE Foam / Cloth / Clear tape; wet gel models use Ag/AgCl sensor",
+      "material": "Backing: PE Foam / Cloth / Clear tape",
       "images": [
-        "ecg-electrode.jpg",
-        "ecg-electrode-2.jpg",
-        "ecg-electrode-3.jpg",
-        "ecg-electrode-4.jpg"
+        "ecg-t716.jpg",
+        "ecg-t715.jpg",
+        "ecg-t916.jpg",
+        "ecg-t816.jpg"
       ],
       "pack": [
         {
-          "label": {
-            "ko": "일반형",
-            "en": "Standard",
-            "es": "Estándar"
-          },
           "steps": [
             [
               "pack",
@@ -1849,13 +1709,383 @@
               "pc"
             ]
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "ecg-diaphoretic",
+      "cat": "cardio",
+      "order": 2,
+      "name": {
+        "ko": "Diaphoretic ECG Electrode",
+        "en": "Diaphoretic ECG Electrode",
+        "es": "Diaphoretic ECG Electrode"
+      },
+      "tagline": {
+        "ko": "땀이 많거나 피부가 약한 환자용 심전도 전극",
+        "en": "For diaphoretic patients and fragile skin",
+        "es": "For diaphoretic patients and fragile skin"
+      },
+      "catalog": {
+        "file": "bioprotech-ecg-catalog-250618.pdf",
+        "name": "TELECTRODE Diaphoretic Solutions"
+      },
+      "summary": {
+        "ko": "넓은 접착면과 강한 접착제로 땀이 많은 환자에게도 단단히 붙는 전극입니다. 피부가 약한 환자용은 부드러운 접착제와 순한 연마재로 피부 부담을 줄였습니다.",
+        "en": "Electrodes with an expanded adhesive surface and robust adhesive for secure contact on diaphoretic patients. Fragile-skin versions use a soft adhesive and a gentle abrader.",
+        "es": "Electrodes with an expanded adhesive surface and robust adhesive for secure contact on diaphoretic patients. Fragile-skin versions use a soft adhesive and a gentle abrader."
+      },
+      "features": {
+        "ko": [
+          "T815: 넓은 접착면으로 발한 환자에게 안정적 부착",
+          "T832 · T832C: 부드러운 접착, 민감한 피부용",
+          "피부 친화적인 연마재로 측정 전 피부 준비"
+        ],
+        "en": [
+          "T815: expanded adhesive area for diaphoretic patients",
+          "T832 · T832C: soft adhesive for fragile skin",
+          "Skin-friendly abrader for gentle skin preparation"
+        ],
+        "es": [
+          "T815: expanded adhesive area for diaphoretic patients",
+          "T832 · T832C: soft adhesive for fragile skin",
+          "Skin-friendly abrader for gentle skin preparation"
+        ]
+      },
+      "applications": [
+        "EMS/ED",
+        "ICU/CCU",
+        "Cardiac Rehab",
+        "Pediatric",
+        "Solutions of Fragile skin",
+        "Diaphoretic solutions",
+        "Repositionable"
+      ],
+      "spec": {
+        "columns": [
+          "Model",
+          "Backing",
+          "Size (mm)",
+          "Shape",
+          "Description"
+        ],
+        "rows": [
+          [
+            "T815",
+            "Cloth",
+            "Ø55",
+            "Round",
+            "Diaphoretic"
+          ],
+          [
+            "T832",
+            "Cloth",
+            "Ø32",
+            "Round",
+            "Fragile skin"
+          ],
+          [
+            "T832C",
+            "Cloth",
+            "Ø32",
+            "Round",
+            "Fragile skin · Radiolucent"
+          ]
+        ]
+      },
+      "material": "Backing: Cloth",
+      "images": [
+        "ecg-t815.jpg",
+        "ecg-t832.jpg"
+      ],
+      "pack": [
         {
-          "label": {
-            "ko": "웻젤형",
-            "en": "Wet gel",
-            "es": "Gel húmedo"
-          },
+          "steps": [
+            [
+              "pack",
+              50,
+              "pc"
+            ],
+            [
+              "box",
+              1000,
+              "pc"
+            ],
+            [
+              "case",
+              10000,
+              "pc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecg-radiolucent",
+      "cat": "cardio",
+      "order": 3,
+      "name": {
+        "ko": "Radiolucent ECG Electrode",
+        "en": "Radiolucent ECG Electrode",
+        "es": "Radiolucent ECG Electrode"
+      },
+      "tagline": {
+        "ko": "X-ray·MRI 영상검사 중에도 붙여 두는 방사선 투과형 전극",
+        "en": "Radiolucent electrodes that stay on during X-ray and MRI",
+        "es": "Radiolucent electrodes that stay on during X-ray and MRI"
+      },
+      "catalog": {
+        "file": "bioprotech-ecg-catalog-250618.pdf",
+        "name": "TELECTRODE Real-time monitoring during imaging processes"
+      },
+      "summary": {
+        "ko": "다른 병동에서 붙인 전극을 X-ray나 MRI 검사 중에도 떼지 않아도 되는 방사선 투과형 전극입니다. 전극 교체 시간과 비용을 줄여 줍니다.",
+        "en": "Radiolucent electrodes that do not need to be removed during X-ray or MRI procedures, saving the time and cost of changing electrodes.",
+        "es": "Radiolucent electrodes that do not need to be removed during X-ray or MRI procedures, saving the time and cost of changing electrodes."
+      },
+      "features": {
+        "ko": [
+          "영상검사 중 실시간 모니터링 유지",
+          "전극 교체 없이 검사 진행",
+          "PE 폼 · 천 · 투명 테이프 백킹 8종"
+        ],
+        "en": [
+          "Real-time monitoring during imaging",
+          "No electrode change needed for imaging",
+          "8 models in PE foam, cloth and clear tape"
+        ],
+        "es": [
+          "Real-time monitoring during imaging",
+          "No electrode change needed for imaging",
+          "8 models in PE foam, cloth and clear tape"
+        ]
+      },
+      "applications": [
+        "EMS/ED",
+        "ICU/CCU",
+        "OR",
+        "Cath Lab",
+        "Cardiac Rehab",
+        "Echo-Cardio",
+        "Fluid resistant solutions"
+      ],
+      "spec": {
+        "columns": [
+          "Model",
+          "Backing",
+          "Size (mm)",
+          "Shape",
+          "Description"
+        ],
+        "rows": [
+          [
+            "T715C",
+            "PE Foam",
+            "Ø55",
+            "Round",
+            "Radiolucent"
+          ],
+          [
+            "T716C",
+            "PE Foam",
+            "43 x 45",
+            "Teardrop",
+            "Radiolucent"
+          ],
+          [
+            "T718C",
+            "PE Foam",
+            "32 x 38",
+            "Teardrop",
+            "Radiolucent"
+          ],
+          [
+            "T815C",
+            "Cloth",
+            "Ø55",
+            "Round",
+            "Radiolucent"
+          ],
+          [
+            "T832C",
+            "Cloth",
+            "Ø32",
+            "Round",
+            "Radiolucent"
+          ],
+          [
+            "T711CT",
+            "PE Foam",
+            "37 x 42.5",
+            "Teardrop",
+            "Radiolucent"
+          ],
+          [
+            "T724CT",
+            "PE Foam",
+            "36 x 42",
+            "Square",
+            "Radiolucent"
+          ],
+          [
+            "T916C",
+            "Clear tape",
+            "43 x 45",
+            "Teardrop",
+            "Radiolucent"
+          ]
+        ]
+      },
+      "material": "Backing: PE Foam / Cloth / Clear tape · radiolucent sensor",
+      "images": [
+        "ecg-t815c.jpg",
+        "ecg-t916c.jpg",
+        "ecg-t832c.jpg"
+      ],
+      "pack": [
+        {
+          "steps": [
+            [
+              "pack",
+              50,
+              "pc"
+            ],
+            [
+              "box",
+              1000,
+              "pc"
+            ],
+            [
+              "case",
+              10000,
+              "pc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecg-stress-holter",
+      "cat": "cardio",
+      "order": 4,
+      "name": {
+        "ko": "Stress Test · Holter ECG Electrode",
+        "en": "Stress Test · Holter ECG Electrode",
+        "es": "Stress Test · Holter ECG Electrode"
+      },
+      "tagline": {
+        "ko": "운동부하검사·홀터 측정용 웻젤 전극",
+        "en": "Wet-gel electrodes for stress tests and Holter",
+        "es": "Wet-gel electrodes for stress tests and Holter"
+      },
+      "catalog": {
+        "file": "bioprotech-ecg-catalog-250618.pdf",
+        "name": "TELECTRODE Enhanced Electrode Solution for Stress Test and Holter"
+      },
+      "summary": {
+        "ko": "전도성 웻젤이 피부 임피던스를 빠르게 낮춰 강한 신호와 안정적인 기준선을 얻는 전극입니다. Ag/AgCl 센서로 일정한 신호 품질을 유지하며, 방사선 투과형(카본) 모델도 있습니다.",
+        "en": "Conductive wet gel quickly lowers skin impedance for strong signals and stable baselines. The Ag/AgCl sensor keeps signal quality consistent; radiolucent carbon models are also available.",
+        "es": "Conductive wet gel quickly lowers skin impedance for strong signals and stable baselines. The Ag/AgCl sensor keeps signal quality consistent; radiolucent carbon models are also available."
+      },
+      "features": {
+        "ko": [
+          "웻젤로 피부 임피던스를 빠르게 낮춤",
+          "빠르고 오래가는 접착으로 움직임 중에도 안정",
+          "Ag/AgCl 센서 · 카본(방사선 투과) 모델 포함"
+        ],
+        "en": [
+          "Wet gel rapidly lowers skin impedance",
+          "Quick, durable adhesion stays stable during movement",
+          "Ag/AgCl sensor · carbon (radiolucent) models"
+        ],
+        "es": [
+          "Wet gel rapidly lowers skin impedance",
+          "Quick, durable adhesion stays stable during movement",
+          "Ag/AgCl sensor · carbon (radiolucent) models"
+        ]
+      },
+      "applications": [
+        "ICU/CCU",
+        "Telemetry/Holter/Event",
+        "Cath Lab",
+        "Stress Test"
+      ],
+      "spec": {
+        "columns": [
+          "Model",
+          "Backing",
+          "Size (mm)",
+          "Shape",
+          "Description"
+        ],
+        "rows": [
+          [
+            "T715W",
+            "PE Foam",
+            "Ø55",
+            "Round",
+            "Wet gel · Ag/AgCl"
+          ],
+          [
+            "T716W",
+            "PE Foam",
+            "43 x 45",
+            "Teardrop",
+            "Wet gel · Ag/AgCl"
+          ],
+          [
+            "T815W",
+            "Cloth",
+            "Ø55",
+            "Round",
+            "Wet gel · Ag/AgCl"
+          ],
+          [
+            "T816W",
+            "Cloth",
+            "43 x 45",
+            "Teardrop",
+            "Wet gel · Ag/AgCl"
+          ],
+          [
+            "T715CW",
+            "PE Foam",
+            "Ø55",
+            "Round",
+            "Wet gel · Carbon (radiolucent)"
+          ],
+          [
+            "T716CW",
+            "PE Foam",
+            "43 x 45",
+            "Teardrop",
+            "Wet gel · Carbon (radiolucent)"
+          ],
+          [
+            "T815CW",
+            "Cloth",
+            "Ø55",
+            "Round",
+            "Wet gel · Carbon (radiolucent)"
+          ],
+          [
+            "T816CW",
+            "Cloth",
+            "43 x 45",
+            "Teardrop",
+            "Wet gel · Carbon (radiolucent)"
+          ]
+        ]
+      },
+      "material": "Backing: PE Foam / Cloth · Ag/AgCl or carbon sensor · wet gel",
+      "images": [
+        "ecg-t715w.jpg",
+        "ecg-t815w.jpg",
+        "ecg-t715cw.jpg",
+        "ecg-t815cw.jpg"
+      ],
+      "pack": [
+        {
           "steps": [
             [
               "pack",
@@ -1873,46 +2103,22 @@
               "pc"
             ]
           ]
-        },
-        {
-          "label": {
-            "ko": "T834CS (5개 1시트)",
-            "en": "T834CS (5 pcs per sheet)",
-            "es": "T834CS (5 uds. por lámina)"
-          },
-          "steps": [
-            [
-              "pack",
-              5,
-              "pc"
-            ],
-            [
-              "box",
-              100,
-              "pc"
-            ],
-            [
-              "case",
-              1000,
-              "pc"
-            ]
-          ]
         }
       ]
     },
     {
       "id": "tab-electrode",
       "cat": "cardio",
-      "order": 2,
+      "order": 5,
       "name": {
         "ko": "TAB Electrode",
         "en": "TAB Electrode",
         "es": "TAB Electrode"
       },
       "tagline": {
-        "ko": "탭형 심전도 전극",
-        "en": "Tab-style ECG electrode",
-        "es": "Electrodo de ECG tipo pestaña"
+        "ko": "안정시 진단 심전도(12유도)용 탭형 전극",
+        "en": "Tab electrodes for diagnostic resting ECG",
+        "es": "Tab electrodes for diagnostic resting ECG"
       },
       "catalog": {
         "file": "bioprotech-ecg-catalog-250618.pdf",
@@ -2023,16 +2229,16 @@
     {
       "id": "neonatal-electrode",
       "cat": "cardio",
-      "order": 3,
+      "order": 6,
       "name": {
         "ko": "Neonatal Electrode",
         "en": "Neonatal Electrode",
         "es": "Neonatal Electrode"
       },
       "tagline": {
-        "ko": "신생아용 심전도 전극",
-        "en": "Neonatal ECG electrode",
-        "es": "Electrodo de ECG neonatal"
+        "ko": "신생아·영아용 프리와이어드 전극",
+        "en": "Prewired infant · neonatal electrodes",
+        "es": "Prewired infant · neonatal electrodes"
       },
       "catalog": {
         "file": "bioprotech-ecg-catalog-250618.pdf",
@@ -2211,7 +2417,7 @@
     {
       "id": "spo2-sensor",
       "cat": "cardio",
-      "order": 4,
+      "order": 7,
       "name": {
         "ko": "SpO₂ Sensor",
         "en": "SpO₂ Sensor",
